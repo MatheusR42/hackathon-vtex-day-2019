@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, withApollo } from "react-apollo";
+import { Link } from "vtex.render-runtime";
 import { ModalDialog } from "vtex.styleguide";
 import { AuthService } from "vtex.react-vtexid";
 import mutationUpdateItems from "../../graphql/mutations/mutationUpdateItems.gql";
@@ -83,9 +84,9 @@ class Header extends React.Component {
             </ModalDialog>
           )}
         </AuthService.RedirectLogout>
-        <div className="shop-name">
+        <Link className="shop-name" page='store.home'>
           <img src={"/arquivos/Caminho 1.png"} />
-        </div>
+        </Link>
         <div className="shop-nav">
           <div className="image-user">
             <img src={this.props.user} onClick={this.modalUser} />
