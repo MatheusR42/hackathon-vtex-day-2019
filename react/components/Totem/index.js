@@ -28,6 +28,11 @@ class Totem extends React.Component {
           type: "string",
           title: "Collection Id",
           default: "137"
+        },
+        showCollection: {
+          type: "boolean",
+          title: "Show Collection",
+          default: true,
         }
       }
     };
@@ -54,7 +59,7 @@ class Totem extends React.Component {
         }}
       >
       <div className="totem-itens">
-        {products.map((product, index) => {
+        {this.props.showCollection && products.map((product, index) => {
           if (index < 2) {
             return <TotemItem product={product} key={index}/>
           }
