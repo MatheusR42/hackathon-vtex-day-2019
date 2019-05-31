@@ -1,0 +1,66 @@
+mutation updateItems($orderFormId: String, $items: [OrderFormItemInput]) {
+  updateItems(orderFormId: $orderFormId, items: $items) {
+    cacheId
+    orderFormId
+    value
+    totalizers {
+      id
+      name
+      value
+    }
+    items {
+      id
+      name
+      imageUrl
+      detailUrl
+      skuName
+      quantity
+      sellingPrice
+      listPrice
+    }
+    shippingData {
+      address {
+        id
+        userId
+        receiverName
+        complement
+        neighborhood
+        country
+        state
+        number
+        street
+        postalCode
+        city
+        reference
+        addressName
+        addressType
+      }
+    }
+    loggedIn
+    userProfileId
+    clientProfileData {
+      email
+      isCorporate
+      corporateDocument
+      corporateName
+      corporatePhone
+      document
+      documentType
+      firstName
+      lastName
+      phone
+      stateInscription
+      tradeName
+    }
+    value
+    salesChannel
+    isCheckedIn
+    storeId
+    userType
+    totalizers {
+      id
+      name
+      value
+    }
+  }
+}

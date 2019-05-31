@@ -181,3 +181,12 @@ form.float-form .formscroll header > button div {
     bottom: 0;
     margin-bottom: 10px;
 }
+
+.vtex-modal__modal, .product-wrapper {
+    color: #000;
+}
+
+.vtex-modal__modal p {
+    color: #000;
+    text-align: center;
+}

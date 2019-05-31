@@ -1,7 +1,8 @@
 import React from "react";
-import { graphql } from "react-apollo";
+import { graphql, withApollo } from "react-apollo";
 import { ModalDialog } from "vtex.styleguide";
 import { AuthService } from "vtex.react-vtexid";
+import mutationUpdateItems from "../../graphql/mutations/mutationUpdateItems.gql";
 import queryOrderForm from "../../graphql/queries/queryOrderForm.gql";
 
 class Header extends React.Component {
@@ -16,40 +17,72 @@ class Header extends React.Component {
     this.setState({ isModalOpen: true });
   };
 
+  removeOthersItemsFromCart = (logout) => {
+    const { orderForm } = this.props.queryOrderForm;
+    
+    var items = orderForm.items.map((item, index) => {
+        return {
+          id: item.id,
+          quantity: 0,
+          index: index,
+          seller: 1
+        }
+    });
+
+    if (!items.length) {
+      logout();
+      return;
+    }
+    
+    this.props.client.mutate({
+      mutation: mutationUpdateItems,
+      variables: {
+        "orderFormId": orderForm.orderFormId,
+        "items": items
+      }
+    }).then((resp) => {
+      logout();
+    }).catch(e => {
+        console.error("error", e);
+    });
+  }
+
   render() {
     let cartQuantity = 0;
 
     if (!this.props.queryOrderForm.loading) {
       const { orderForm } = this.props.queryOrderForm;
-      cartQuantity = orderForm.items.reduce(
-        (a, b) => {
-          return a.quantity + b.quantity;
-        },
-        {
-          quantity: 0
-        }
-      );
+      if (orderForm.items.length) {
+        cartQuantity = orderForm.items.reduce(
+          (a, b) => {
+            return a.quantity + b.quantity;
+          },
+          {
+            quantity: 0
+          }
+        );
+      }
     }
 
     return (
       <div className="header">
         <AuthService.RedirectLogout returnUrl="/">
         {({ action: logout }) => (
-          <ModalDialog
-            centered
-            confirmation={{
-              onClick: logout,
-              label: "Ok"
-            }}
-            cancelation={{
-              onClick: () => this.setState({ isModalOpen: false }),
-              label: "Canelar"
-            }}
-            isOpen={this.state.isModalOpen}
-            onClose={() => this.setState({ isModalOpen: false })}
-          >
-            <p>Deseja sair?</p>
-          </ModalDialog>
+            <ModalDialog
+              centered
+              confirmation={{
+                onClick: () => this.removeOthersItemsFromCart(logout),
+                label: "Sim"
+              }}
+              cancelation={{
+                onClick: () => this.setState({ isModalOpen: false }),
+                label: "Não"
+              }}
+              isOpen={this.state.isModalOpen}
+              onClose={() => this.setState({ isModalOpen: false })}
+            >
+              <p>Deseja sair?</p>
+            </ModalDialog>
           )}
         </AuthService.RedirectLogout>
         <div className="shop-name">
@@ -76,4 +109,4 @@ export default graphql(queryOrderForm, {
     ssr: false;
   },
   name: "queryOrderForm"
-})(Header);
+})(withApollo(Header));
