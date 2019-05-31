@@ -1,13 +1,14 @@
 {
-    "store.home.qrcode": {
-        "blocks": [
-          "qrcode"
-        ]
-    },
-    "store.easyshop": {
-      "blocks": [
-        "easyshop"
-      ]
+  "store.home.qrcode": {
+    "blocks": ["qrcode"],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+  "store.login.qrcode": {
+    "blocks": [
+      "login-content.easyshop"
+    ]
   },
   "header.full": {
     "blocks": []

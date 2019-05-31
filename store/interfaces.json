@@ -4,15 +4,15 @@
       "qrcode"
     ]
   },
-  "store.easyshop": {
+  "store.login.qrcode": {
     "required": [
-      "easyshop"
+      "login-content.easyshop"
     ]
   },
   "qrcode": {
     "component": "QrCode"
   },
-  "easyshop": {
+  "login-content.easyshop": {
     "component": "Easyshop"
   }
 }

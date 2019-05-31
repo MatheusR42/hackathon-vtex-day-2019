@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body {
     background: red;
     height: 100vh;
-    
+    font-family: 'Montserrat', sans-serif !important;
 }
 .bg-base{
     background: rgba(0,206,151,1);
@@ -38,7 +40,7 @@ body {
     width: 100%;
     z-index: 9;
     left: 1%;
-    height: 95vh;
+    height: 85vh;
     text-align: center;
     bottom: -100%;
     /* bottom: 0; */
@@ -68,7 +70,6 @@ form.float-form .formscroll header > button div {
 .float-form .formscroll {
     overflow: auto;
     height: 100%;
-    padding-bottom: 100px;
 }
 
 .float-form  .button_group.flex.flex-row {
@@ -76,7 +77,13 @@ form.float-form .formscroll header > button div {
 }
 
 .float-form img {
-    max-height: 400px;
+    max-height: 300px;
+}
+
+.product-wrapper h1 {
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
 }
 
 .float-form .vtex__icon-spinner {
@@ -123,6 +130,7 @@ form.float-form .formscroll header > button div {
     left: 4%;
     border-radius: 7px 7px 0 0;
     overflow: hidden;
+    padding-bottom: 100px;
 }
 
 /* .float-form.isOpen {

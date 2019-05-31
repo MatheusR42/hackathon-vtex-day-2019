@@ -19,12 +19,18 @@ class QrCode extends React.Component {
   };
 
   handleScan = data => {
-    
-    // if (data) {
-    //   this.setState({
-    //     result: data
-    //   });
-    // }
+    if (data && ~data.indexOf("/p")) {
+      const urlComponents = new URL(data);
+      const slug = urlComponents.pathname.split("/")[1];
+      const utm = this.getParams("utm_source", data);
+      const sku = this.getParams("sku", data);
+
+      this.setState({
+        sku,
+        slug,
+        utm
+      });
+    }
   };
 
   handleError = err => {
