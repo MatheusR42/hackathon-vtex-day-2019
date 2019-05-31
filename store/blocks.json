@@ -1,6 +1,6 @@
 {
-  "store.home.qrcode": {
-    "blocks": ["qrcode"],
+  "store.home.menu": {
+    "blocks": ["menu"],
     "parent": {
       "challenge": "challenge.profile"
     }
@@ -8,6 +8,11 @@
   "store.login.qrcode": {
     "blocks": [
       "login-content.easyshop"
+    ]
+  },
+  "store.qrcode": {
+    "blocks": [
+      "qrcode"
     ]
   },
   "minicart": {

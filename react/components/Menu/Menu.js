@@ -28,10 +28,14 @@ class Menu extends React.Component {
                         Onde você está?
                     </div>
                     <div className="btn-shop">
-                        <img src={ '/arquivos/btn-shop.png' } onClick={this.teste} />
+                        <a href="/qrcode" >
+                            <img src={ '/arquivos/shop.png' } />
+                        </a>
                     </div>
                     <div className="btn-noshop">
-                       <img src={ '/arquivos/btn-noshop.png' } onClick={this.teste} />
+                       <a href="/shop">
+                            <img src={ '/arquivos/noshop.png' }  />
+                       </a>
                     </div>
                 </div>
                 <Footer />
