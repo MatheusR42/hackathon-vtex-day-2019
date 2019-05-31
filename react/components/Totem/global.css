@@ -1,0 +1,26 @@
+.totem-component {
+    height: 100vh;
+}
+
+.totem-component .qr-wrapper {
+    position: relative;
+    display: block;
+}
+
+.totem-item {
+    position: relative;
+    text-align: center;
+}
+
+.totem-itens {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    position: absolute;
+    width: 100%;
+    top: 39%;
+}
+
+.totem-item img {
+    width: 140px;
+}

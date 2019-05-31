@@ -185,7 +185,7 @@ class FloatForm extends React.Component {
                           this.addToCart(showToast);
                         }}
                       >
-                        Add to Cart
+                        Comprar
                       </Button>
                     ]}
                   />

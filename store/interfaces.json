@@ -19,6 +19,11 @@
       "categorias"
     ]
   },
+  "store.custom.qrcode": {
+    "required": [
+      "totem"
+    ]
+  },
   "qrcode": {
     "component": "QrCode"
   },
@@ -30,5 +35,8 @@
   },
   "categorias": {
     "component": "Categorias"
+  },
+  "totem": {
+    "component": "Totem"
   }
 }
