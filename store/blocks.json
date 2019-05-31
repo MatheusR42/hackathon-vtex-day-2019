@@ -5,6 +5,11 @@
       "challenge": "challenge.profile"
     }
   },
+  "store.custom.qrcode": {
+    "blocks": [
+      "totem"
+    ]
+  },
   "store.login.qrcode": {
     "blocks": [
       "login-content.easyshop"

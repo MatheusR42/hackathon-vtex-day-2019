@@ -1,5 +1,8 @@
 {
     "store.qrcode":{
         "path": "/qrcode"
+    },
+    "store.custom.qrcode":{
+        "path": "/totem"
     }
 }
