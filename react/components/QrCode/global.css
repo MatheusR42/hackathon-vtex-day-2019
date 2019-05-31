@@ -136,6 +136,23 @@ form.float-form .formscroll header > button div {
     padding-bottom: 100px;
 }
 
+.image-cart .quantity {
+    color: #fff;
+    width: 23px;
+    height: 23px;
+    border-radius: 10px;
+    background: red;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    top: -5px;
+    right: -3px;
+}
+
+.image-cart {
+    position: relative;
+}
 /* .float-form.isOpen {
     bottom: 0;
 } */
