@@ -1,5 +1,6 @@
 import React from "react";
 import QrReader from "react-qr-reader";
+import Header from '../Header/header';
 import { FormattedMessage } from "react-intl";
 import './global.css';
 
@@ -9,7 +10,7 @@ class QrCode extends React.Component {
     this.state = {
       result: "No results"
     };
-  }
+  };
 
   handleScan = data => {
     if (data) {
@@ -17,7 +18,7 @@ class QrCode extends React.Component {
         result: data
       });
     }
-  };
+  }
 
   handleError = err => {
     console.error(err);
@@ -26,11 +27,18 @@ class QrCode extends React.Component {
   render() {
     return (
       <div>
+        <Header 
+          user={ '/arquivos/user.png' }
+          avatar={ '/arquivos/cart.png' }
+        />
         <QrReader
           delay={300}
           onError={this.handleError}
           onScan={this.handleScan}
-          style={{ width: "100%" }}
+          style={{ 
+            width: "100",
+
+          }}
         />
       </div>
     );

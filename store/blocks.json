@@ -4,13 +4,18 @@
           "qrcode"
         ]
     },
-    "header.full": {
-      "blocks": []
-    },
-    "header": {
-      "blocks": []
-    },
-    "footer": {
-      "blocks": []
-    }
+    "store.easyshop": {
+      "blocks": [
+        "easyshop"
+      ]
+  },
+  "header.full": {
+    "blocks": []
+  },
+  "header": {
+    "blocks": []
+  },
+  "footer": {
+    "blocks": []
+  }
 }

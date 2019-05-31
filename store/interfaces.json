@@ -4,7 +4,15 @@
       "qrcode"
     ]
   },
+  "store.easyshop": {
+    "required": [
+      "easyshop"
+    ]
+  },
   "qrcode": {
     "component": "QrCode"
+  },
+  "easyshop": {
+    "component": "Easyshop"
   }
 }

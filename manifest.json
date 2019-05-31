@@ -25,7 +25,10 @@
     "vtex.store-graphql": "2.x",
     "vtex.styleguide": "9.x",
     "vtex.store-header": "2.x",
-    "vtex.store-footer": "2.x"
+    "vtex.store-footer": "2.x",
+    "vtex.minicart": "2.x",
+    "vtex.login": "2.x",
+    "hackathonvtex22.easy-compra": "0.1.0"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

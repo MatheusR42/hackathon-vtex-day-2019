@@ -1,9 +1,11 @@
-body {
+
+.easyshop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
     background: red;
     height: 100vh;
-    
-}
-.bg-base{
     background: rgba(0,206,151,1);
     background: -moz-linear-gradient(top, rgba(0,206,151,1) 0%, rgba(0,127,157,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,206,151,1)), color-stop(100%, rgba(0,127,157,1)));
@@ -13,23 +15,29 @@ body {
     background: linear-gradient(to bottom, rgba(0,206,151,1) 0%, rgba(0,127,157,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ce97', endColorstr='#007f9d', GradientType=0 );
 }
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.easyshop .logo {
     padding: 1em;
     margin: 0 !important;
 }
-.header .shop-name img {
-    height: 35px;
+.easyshop .label-login {
+    margin: 15px 0 -10px;
 }
-.header .shop-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 120px;
+.home-banner img {
+    width: 100vw;
 }
-.header img {
-    height: 50px;
+.list li:nth-child(1),
+.list li:nth-child(2) {
+    display: none
+}
+.easyshop .vtex-login-2-x-formTitle {
+    display: none;
+}
+.easyshop .vtex-login-2-x-content {
+    background-color: transparent;
+}
+.easyshop .vtex-login-2-x-content button {
+    background-color: #ffffffa8;
+    height: 75px;
+    border-radius: 15px;     
+    border: none;
 }
