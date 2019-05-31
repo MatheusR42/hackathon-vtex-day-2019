@@ -86,7 +86,7 @@ form.float-form .formscroll header > button div {
 .product-wrapper h1 {
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .float-form .vtex__icon-spinner {
@@ -192,4 +192,9 @@ form.float-form .formscroll header > button div {
 .vtex-modal__modal p {
     color: #000;
     text-align: center;
+}
+
+.float-price {
+    margin: 10px 0;
+    font-size: 18px;
 }
