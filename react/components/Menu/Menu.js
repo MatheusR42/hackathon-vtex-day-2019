@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "vtex.render-runtime";
 import '../QrCode/global.css'
 import Header from '../Header/header'
 import Footer from '../Footer/Footer'
@@ -28,14 +29,16 @@ class Menu extends React.Component {
                         Onde você está?
                     </div>
                     <div className="btn-shop">
-                        <a href="/qrcode" >
-                            <img src={ '/arquivos/shop.png' } />
-                        </a>
+                        <Link 
+                            page='store.qrcode'
+                        >
+                        <img src={ '/arquivos/shop.png' } />
+                        </Link>
                     </div>
                     <div className="btn-noshop">
-                       <a href="/shop">
-                            <img src={ '/arquivos/noshop.png' }  />
-                       </a>
+                       <Link page="store.qrcode">
+                         <img src={ '/arquivos/noshop.png' }  />
+                       </Link>
                     </div>
                 </div>
                 <Footer />

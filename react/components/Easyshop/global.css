@@ -9,6 +9,7 @@
     
 }
 body.bg-base {
+    height: 100vh !important;
     background: rgba(0,206,151,1);
     background: -moz-linear-gradient(top, rgba(0,206,151,1) 0%, rgba(0,127,157,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,206,151,1)), color-stop(100%, rgba(0,127,157,1)));
@@ -19,12 +20,13 @@ body.bg-base {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ce97', endColorstr='#007f9d', GradientType=0 );
 }
 .easyshop .logo {
-    padding: 1em;
+    padding: 1em ;
     margin: 0 !important;
 }
 .easyshop .label-login {
     margin: 15px 0 -10px;
 }
+
 .home-banner img {
     width: 100vw;
 }
@@ -40,7 +42,7 @@ body.bg-base {
 }
 .easyshop .vtex-login-2-x-content button {
     background-color: #ffffffa8;
-    height: 75px;
+    height: 60px;
     border-radius: 15px;     
     border: none;
 }

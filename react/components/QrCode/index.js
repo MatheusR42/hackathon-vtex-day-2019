@@ -2,9 +2,10 @@ import React from "react";
 import QrReader from "react-qr-reader";
 import Header from '../Header/header';
 import { FormattedMessage } from "react-intl";
+import { Link } from "vtex.render-runtime";
 import './global.css';
 import FloatForm from "./FloatForm";
-import { ToastProvider } from "vtex.styleguide";
+import { ToastProvider,Button } from "vtex.styleguide";
 import Footer from '../Footer/Footer'
 import "./global.css";
 
@@ -96,6 +97,11 @@ class QrCode extends React.Component {
             style={{ width: "100%" }}
           />
         )}
+        <div className="btn-qrcode">
+          <Link  page="store.home">
+            <img src={ '/arquivos/btn-qrcode.png' } />
+          </Link>
+        </div>
         <Footer />
           {sku && slug && (
             <FloatForm
