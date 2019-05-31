@@ -36,7 +36,7 @@ class Menu extends React.Component {
                         </Link>
                     </div>
                     <div className="btn-noshop">
-                       <Link page="store.qrcode">
+                       <Link page="store.categorias">
                          <img src={ '/arquivos/noshop.png' }  />
                        </Link>
                     </div>

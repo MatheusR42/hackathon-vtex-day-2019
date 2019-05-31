@@ -26,9 +26,6 @@ class Categorias extends React.Component {
                     <div>
                         catalogo
                     </div>
-                    <div>
-                        <input />
-                    </div>
                     <div className="btn">
                         <a href="/snacks/d">
                             <img src={'/arquivos/cat-1.png'} />
