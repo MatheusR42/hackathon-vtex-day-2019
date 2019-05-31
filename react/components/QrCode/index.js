@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import './global.css';
 import FloatForm from "./FloatForm";
 import { ToastProvider } from "vtex.styleguide";
-
+import Footer from '../Footer/Footer'
 import "./global.css";
 
 class QrCode extends React.Component {
@@ -94,7 +94,7 @@ class QrCode extends React.Component {
             onScan={this.handleScan}
             style={{ width: "100%" }}
           />
-
+        <Footer />
           {sku && slug && (
             <FloatForm
               sku={sku}

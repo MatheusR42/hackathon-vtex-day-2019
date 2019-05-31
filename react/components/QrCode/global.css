@@ -155,6 +155,9 @@ form.float-form .formscroll header > button div {
 .menu-pointer img {
     margin-right: 5px;
 }
+.menu-btn .btn-shop {
+    margin-bottom: 10px;
+}
 
 .footer {
     display: flex;
