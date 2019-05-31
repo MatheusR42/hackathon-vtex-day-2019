@@ -46,3 +46,18 @@ body.bg-base {
     border-radius: 15px;     
     border: none;
 }
+
+.render-route-store-product .vtex-store-components-3-x-container,
+.render-route-store-search-department .vtex-store-components-3-x-container {
+    background: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: 0 1em 2em 1em;
+}
+.render-route-store-search-department .vtex-search-result-3-x-totalProducts{
+    color: rgb(0,206,151,1);
+}
+.render-route-store-search-department .vtex-search-result-3-x-filters{
+    display: none !important;
+}

@@ -15,6 +15,13 @@
       "login-content.easyshop"
     ]
   },
+  "store.search.qrcode": {
+    "blocks": [ "search-result" ]
+  },
+  "store.product.qrcode": {
+    "blocks": [  "product-details"]
+  },
+
   "store.qrcode": {
     "blocks": [
       "qrcode"

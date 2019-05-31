@@ -6,6 +6,9 @@ import { AuthService } from "vtex.react-vtexid";
 import mutationUpdateItems from "../../graphql/mutations/mutationUpdateItems.gql";
 import queryOrderForm from "../../graphql/queries/queryOrderForm.gql";
 
+import "../QrCode/global.css";
+import "../Easyshop/global.css";
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -89,11 +92,11 @@ class Header extends React.Component {
         </Link>
         <div className="shop-nav">
           <div className="image-user">
-            <img src={this.props.user} onClick={this.modalUser} />
+            <img src='/arquivos/user.png' onClick={this.modalUser} />
           </div>
           <div className="image-cart">
             <a href="/checkout#/cart">
-              <img src={this.props.avatar} />
+              <img src='/arquivos/cart.png' />
               <span className="quantity">{cartQuantity}</span>
             </a>
           </div>

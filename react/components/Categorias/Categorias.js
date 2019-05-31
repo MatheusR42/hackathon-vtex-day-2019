@@ -30,10 +30,10 @@ class Categorias extends React.Component {
                         <input />
                     </div>
                     <div className="btn">
-                        <a href="/snacks">
+                        <a href="/snacks/d">
                             <img src={'/arquivos/cat-1.png'} />
                         </a>
-                        <a href="/bebidas">
+                        <a href="/bebidas/d">
                             <img src={'/arquivos/cat-2.png'} />
                         </a>
                     </div>

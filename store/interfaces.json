@@ -9,6 +9,22 @@
       "login-content.easyshop"
     ]
   },
+  "store.product.qrcode": {
+    "before": [
+      "header.full.qrcode"
+    ],
+    "required": [
+      "product-details"
+    ]
+  },
+  "store.search.qrcode": {
+    "before": [
+      "header.full.qrcode"
+    ],
+    "required": [
+      "search-result"
+    ]
+  },
   "store.qrcode": {
     "required": [
       "qrcode"
@@ -29,6 +45,17 @@
   },
   "login-content.easyshop": {
     "component": "Easyshop"
+  },
+  "header.full.qrcode": {
+    "required": [
+      "logo",
+      "login",
+      "minicart",
+      "telemarketing",
+      "category-menu",
+      "search-bar"
+    ],
+    "component": "HeaderSpace"
   },
   "menu": {
     "component": "Menu"
