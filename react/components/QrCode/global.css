@@ -5,6 +5,7 @@
 }
 
 body.bg-base {
+    color: #fff;    
     height: 100vh;
     font-family: 'Montserrat', sans-serif !important;
     background: rgba(0,206,151,1);
@@ -138,3 +139,28 @@ form.float-form .formscroll header > button div {
 /* .float-form.isOpen {
     bottom: 0;
 } */
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    justify-content: center
+}
+.menu-pointer {
+    width: 90%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.menu-pointer img {
+    margin-right: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}

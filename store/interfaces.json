@@ -9,10 +9,18 @@
       "login-content.easyshop"
     ]
   },
+  "store.menu": {
+    "required": [
+      "menu"
+    ]
+  },
   "qrcode": {
     "component": "QrCode"
   },
   "login-content.easyshop": {
     "component": "Easyshop"
+  },
+  "menu": {
+    "component": "Menu"
   }
 }
