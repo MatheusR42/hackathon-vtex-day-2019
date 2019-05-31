@@ -1,7 +1,7 @@
 {
-  "store.home.qrcode": {
+  "store.home.menu": {
     "required": [
-      "qrcode"
+      "menu"
     ]
   },
   "store.login.qrcode": {
@@ -9,9 +9,9 @@
       "login-content.easyshop"
     ]
   },
-  "store.menu": {
+  "store.qrcode": {
     "required": [
-      "menu"
+      "qrcode"
     ]
   },
   "qrcode": {

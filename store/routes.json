@@ -1,5 +1,5 @@
 {
-    "store.menu":{
-        "path": "/menu"
+    "store.qrcode":{
+        "path": "/qrcode"
     }
 }
