@@ -17,35 +17,38 @@ class Header extends React.Component {
     this.setState({ isModalOpen: true });
   };
 
-  removeOthersItemsFromCart = (logout) => {
+  removeOthersItemsFromCart = logout => {
     const { orderForm } = this.props.queryOrderForm;
-    
+
     var items = orderForm.items.map((item, index) => {
-        return {
-          id: item.id,
-          quantity: 0,
-          index: index,
-          seller: 1
-        }
+      return {
+        id: item.id,
+        quantity: 0,
+        index: index,
+        seller: 1
+      };
     });
 
     if (!items.length) {
       logout();
       return;
     }
-    
-    this.props.client.mutate({
-      mutation: mutationUpdateItems,
-      variables: {
-        "orderFormId": orderForm.orderFormId,
-        "items": items
-      }
-    }).then((resp) => {
-      logout();
-    }).catch(e => {
+
+    this.props.client
+      .mutate({
+        mutation: mutationUpdateItems,
+        variables: {
+          orderFormId: orderForm.orderFormId,
+          items: items
+        }
+      })
+      .then(resp => {
+        logout();
+      })
+      .catch(e => {
         console.error("error", e);
-    });
-  }
+      });
+  };
 
   render() {
     let cartQuantity = 0;
@@ -53,21 +56,16 @@ class Header extends React.Component {
     if (!this.props.queryOrderForm.loading) {
       const { orderForm } = this.props.queryOrderForm;
       if (orderForm.items.length) {
-        cartQuantity = orderForm.items.reduce(
-          (a, b) => {
-            return a.quantity + b.quantity;
-          },
-          {
-            quantity: 0
-          }
-        );
+        cartQuantity = orderForm.items.reduce((a, b) => {
+          return a + b.quantity;
+        }, 0);
       }
     }
 
     return (
       <div className="header">
         <AuthService.RedirectLogout returnUrl="/">
-        {({ action: logout }) => (
+          {({ action: logout }) => (
             <ModalDialog
               centered
               confirmation={{
