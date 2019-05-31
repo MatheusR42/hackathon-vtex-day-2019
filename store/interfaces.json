@@ -1,0 +1,10 @@
+{
+  "store.home.qrcode": {
+    "required": [
+      "qrcode"
+    ]
+  },
+  "qrcode": {
+    "component": "QrCode"
+  }
+}

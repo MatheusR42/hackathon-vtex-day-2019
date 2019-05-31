@@ -1,0 +1,16 @@
+{
+    "store.home.qrcode": {
+        "blocks": [
+          "qrcode"
+        ]
+    },
+    "header.full": {
+      "blocks": []
+    },
+    "header": {
+      "blocks": []
+    },
+    "footer": {
+      "blocks": []
+    }
+}

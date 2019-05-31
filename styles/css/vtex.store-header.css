@@ -1,0 +1,5 @@
+.container,
+.container + :global(.bg-base) {
+    display: none !important;
+}
+
