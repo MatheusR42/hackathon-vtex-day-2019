@@ -1,5 +1,8 @@
 {
     "store.qrcode":{
         "path": "/qrcode"
+    },
+    "store.categorias": {
+        "path":"/categorias"
     }
 }

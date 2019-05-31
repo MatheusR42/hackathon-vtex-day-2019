@@ -14,6 +14,11 @@
       "qrcode"
     ]
   },
+  "store.categorias": {
+    "required": [
+      "categorias"
+    ]
+  },
   "qrcode": {
     "component": "QrCode"
   },
@@ -22,5 +27,8 @@
   },
   "menu": {
     "component": "Menu"
+  },
+  "categorias": {
+    "component": "Categorias"
   }
 }
