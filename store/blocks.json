@@ -10,6 +10,10 @@
       "login-content.easyshop"
     ]
   },
+  "minicart": {
+    "blocks": [ "product-summary" ],
+    "props": { "type": "popup", "showRemoveButton": true, "showDiscount": true, "showSku": true, "labelMiniCartEmpty": "", "labelButtonFinishShopping": "Go to checkout", "enableQuantitySelector": true, "maxQuantity": 10 }
+  },
   "header.full": {
     "blocks": []
   },
