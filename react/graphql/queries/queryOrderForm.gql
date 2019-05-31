@@ -1,0 +1,22 @@
+query orderForm {
+  orderForm {
+    cacheId
+    orderFormId
+    value
+    totalizers {
+      id
+      name
+      value
+    }
+    items {
+      id
+      name
+      imageUrl
+      detailUrl
+      skuName
+      quantity
+      sellingPrice
+      listPrice
+    }
+  }
+}

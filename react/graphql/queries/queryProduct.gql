@@ -1,0 +1,51 @@
+query product($slug: String) {
+  product(slug: $slug) {
+    cacheId
+    productId
+    productName
+    brand
+    linkText
+    categories
+    link
+    clusterHighlights {
+      name
+    }
+    items {
+      itemId
+      name
+      referenceId {
+        Key
+        Value
+      }
+      images {
+        cacheId
+        imageId
+        imageLabel
+        imageTag
+        imageUrl
+      }
+      sellers {
+        sellerId
+        commertialOffer {
+          Installments(criteria: MAX, rates: false) {
+            Value
+            InterestRate
+            NumberOfInstallments
+            Name
+          }
+          Price
+          ListPrice
+          AvailableQuantity
+        }
+      }
+      variations {
+        name
+        values
+      }
+    }
+    properties {
+      name
+      values
+    }
+  }
+}
