@@ -1,3 +1,95 @@
-body {
-    background: red;
+.float-form {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    left: 1%;
+    height: 95vh;
+    text-align: center;
+    bottom: -100%;
+    /* bottom: 0; */
+    transition: all .5s;
 }
+
+.float-form.isOpen {
+    bottom: 0;
+}
+
+form.float-form .formscroll header > button {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    padding: 0;
+    width: auto;
+    background: none;
+    border: none;
+}
+
+form.float-form .formscroll header > button div {
+    padding: 0;
+    font-size: 38px;
+    color: #000;
+}
+
+.float-form .formscroll {
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.float-form  .button_group.flex.flex-row {
+    justify-content: space-around;
+}
+
+.float-form img {
+    max-height: 400px;
+}
+
+.float-form .vtex__icon-spinner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00CE97;
+}
+
+.float-actions .bg-action-primary {
+    background: #00CE97 !important;
+    border: #00CE97 !important;
+}
+
+.float-actions .c-action-primary {
+    color: #00CE97 !important;
+}
+
+.float-form header {
+    padding: 15px;
+}
+
+
+
+.float-actions {
+    position: fixed;
+    display: none;
+    width: 100%;
+    left: -1%;
+    bottom: 0;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0px 0 2px 4px #ddd;
+}
+
+.float-form.isOpen .float-actions  {
+    display: block;
+}
+
+.product-wrapper {
+    position: relative;
+    width: 92%;
+    background: #fff;
+    left: 4%;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+}
+
+/* .float-form.isOpen {
+    bottom: 0;
+} */

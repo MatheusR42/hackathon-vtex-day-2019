@@ -8,7 +8,6 @@
   "builders": {
     "store": "0.x",
     "react": "3.x",
-    "messages": "1.x",
     "styles": "1.x"
   },
   "mustUpdateAt": "2020-02-28",
@@ -25,7 +24,8 @@
     "vtex.store-graphql": "2.x",
     "vtex.styleguide": "9.x",
     "vtex.store-header": "2.x",
-    "vtex.store-footer": "2.x"
+    "vtex.store-footer": "2.x",
+    "vtex.react-vtexid": "4.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
