@@ -83,17 +83,19 @@ class QrCode extends React.Component {
       <div>
       
         <ToastProvider positioning="window">
-          <button onClick={this.fakeScan}>faq scan</button>
+          {/* <button onClick={this.fakeScan}>faq scan</button> */}
           <Header 
           user={ '/arquivos/user.png' }
           avatar={ '/arquivos/cart.png' }
         />
+        {!sku && !slug && (
           <QrReader
             delay={300}
             onError={this.handleError}
             onScan={this.handleScan}
             style={{ width: "100%" }}
           />
+        )}
         <Footer />
           {sku && slug && (
             <FloatForm
